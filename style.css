@@ -216,6 +216,7 @@ body {
     width: 350px;
 }
 
+
 .playnow {
     display: flex;
     justify-content: center;
@@ -236,6 +237,7 @@ body {
     background-color: white;
     /* padding: 6px; */
     margin: 6px;
+    cursor: pointer;
 }
 
 .circle {
@@ -246,5 +248,14 @@ body {
     height: 12px;
     border-radius: 50%;
     left: 0;
-    transition: left .5s ;
+    transition: left .5s;
+}
+
+.songinfo, .songtime {
+    padding: 0 12px;
+}
+
+.abovebar {
+    display: flex;
+    justify-content: space-between;
 }
