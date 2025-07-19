@@ -11,9 +11,14 @@ body {
     color: white;
 }
 
+
 .left {
     width: 25vw;
     padding: 10px;
+}
+
+.close {
+    display: none;
 }
 
 .right {
@@ -81,6 +86,10 @@ body {
 }
 
 .spotifyPlaylists {
+    padding: 16px;
+}
+
+.spotifyPlaylists h1 {
     padding: 16px;
 }
 
@@ -168,11 +177,11 @@ body {
 .playbar {
     position: fixed;
     bottom: 56px;
-    background-color: #000;
+    background-color: #302e2e;
     width: 69.5vw;
     padding: 12px;
     border-radius: 10px;
-    height: 40px;
+    min-height: 40px;
 }
 
 .songbuttons {
@@ -190,6 +199,17 @@ body {
     height: 555px;
     overflow: auto;
     margin-bottom: 50px;
+}
+
+.hamburgerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.hamburger {
+    display: none;
 }
 
 .songList ul {
@@ -216,6 +236,9 @@ body {
     width: 350px;
 }
 
+.info div {
+    word-break: break-all;
+}
 
 .playnow {
     display: flex;
@@ -251,11 +274,77 @@ body {
     transition: left .5s;
 }
 
-.songinfo, .songtime {
+.songinfo {
+    width: 370px;
+}
+
+.songinfo,
+.songtime {
     padding: 0 12px;
 }
 
 .abovebar {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 1400px) {
+    .left {
+        position: absolute;
+        left: -120%;
+        z-index: 1;
+        transition: all .4s;
+        width: 392px;
+        background-color: #000;
+    }
+
+    .left .close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .right {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .playbar {
+        width: calc(100vw - 60px);
+        background-color: #302e2e;
+        font-size: 10px;
+    }
+
+    .seekbar {
+        width: calc(100vw - 60px);
+    }
+
+    .songtime {
+        display: none;
+    }
+
+    .songbuttons img {
+        width: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .cardContainer {
+        margin: 10px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90vw;
+    }
+
+    .songinfo {
+        width: auto;
+    }
 }
